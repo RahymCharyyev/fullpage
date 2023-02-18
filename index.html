@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page JS</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./fullpage.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./fullpage.min.js"></script>
+</head>
+
+<body style="background-color: rgb(13,13,13);">
+    <div class="container" style="text-align: center;">
+        <div id="fullpage">
+            <div class="section" style="color: #fff;">First block</div>
+            <div class="section" style="color: #fff;">
+                <div class="slide">First slide of block 2</div>
+                <div class="slide">Second slide of block 2</div>
+                <div class="slide">Third slide of block 2</div>
+            </div>
+            <div class="section" style="color: #fff;">Third block</div>
+            <div class="section" style="color: #fff;">Fourth block</div>
+        </div>
+    </div>
+    <script>
+        $(function () {
+            $("#fullpage").fullpage();
+        })
+        new fullpage('#fullpage', {
+            sectionsColor: ['red', 'green', 'blue', 'orange']
+        })
+    </script>
+</body>
+
+</html>
